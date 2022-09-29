@@ -1,0 +1,7 @@
+module.cpp
+pyproject.toml
+setup.py
+dielepy.egg-info/PKG-INFO
+dielepy.egg-info/SOURCES.txt
+dielepy.egg-info/dependency_links.txt
+dielepy.egg-info/top_level.txt
