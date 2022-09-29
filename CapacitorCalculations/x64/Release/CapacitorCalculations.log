@@ -1,0 +1,13 @@
+﻿  module.cpp
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\functions.h(107,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\functions.h(136,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\functions.h(168,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\functions.h(169,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\functions.h(201,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(13,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     Creating library D:\GitHub\CapacitorCalculations\x64\Release\CapacitorCalculations.lib and object D:\GitHub\CapacitorCalculations\x64\Release\CapacitorCalculations.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 26 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  CapacitorCalculations.vcxproj -> D:\GitHub\CapacitorCalculations\x64\Release\CapacitorCalculations.pyd
