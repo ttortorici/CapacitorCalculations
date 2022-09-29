@@ -22,7 +22,19 @@ This package includes functions which make calculating the capacitance for inter
 
 `k`: modulus $k$ for complete elliptic integral of the first kind.
 
-This is used to calculate $\frac{K(k)}{K'(k)}$ where $K$ is the complete elliptic integral of the first kind and $K'$ is its complement such that $K'(k)=K(k')$ and $k'=\sqrt{1-k^2}$. $K(0)=\frac{\pi}{2}$, but $\lim\limits_{k\rightarrow 1}K(k)\rightarrow \tilde{\infty}$, so for small $k$, $K'(k)$ becomes problematic. This starts to happen for $k<10^{-7}$. For these cases
+This is used to calculate $\frac{K(k)}{K'(k)}$ where $K$ is the complete elliptic integral of the first kind and $K'$ is its complement such that $K'(k)=K(k')$ and $k'=\sqrt{1-k^2}$. This uses the `comp_ellint1` from the cmath standard library. $K(0)=\frac{\pi}{2}$, but $\lim\limits_{k\rightarrow 1}K(k)\rightarrow \tilde{\infty}$, so for small $k$, $K'(k)$ becomes problematic. This starts to happen for $k<10^{-7}$. For these cases of small $k$, you should use `ellint_ratio_aprrox`.
+
+---
+
+`ellint_ratio_approx(k: float) -> float`
+
+`k`: modulus $k$ for complete elliptic integral of the first kind.
+
+This is used to calculate $\frac{K(k)}{K'(k)}$ for small $k$ ($k<10^{-6}). This is based on the approximation im ref. (2).
+
+$\pi/ln[2\frac{1+(1-k^2)^{1/4}}{1-(1-k^2)^{1/4}}]$
+
+---
 
 `k_thin(g: float, h: float, u: float) -> float`
 
