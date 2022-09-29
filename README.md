@@ -30,9 +30,9 @@ This is used to calculate $\frac{K(k)}{K'(k)}$ where $K$ is the complete ellipti
 
 `k`: modulus $k$ for complete elliptic integral of the first kind.
 
-This is used to calculate $\frac{K(k)}{K'(k)}$ for small $k$ $(k<10^{-6})$. This is based on the approximation im ref. (2).
+This is used to calculate $\frac{K(k)}{K'(k)}$ for small $k$ $(k<10^{-6})$. This is based on the approximation in ref. (2).
 
-$\pi/\ln[2\frac{1+(1-k^2)^{1/4}}{1-(1-k^2)^{1/4}}]$
+$\frac{K(k)}{K'(k)}=\pi/\ln[2\frac{1+(1-k^2)^{1/4}}{1-(1-k^2)^{1/4}}]$
 
 ---
 
