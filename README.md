@@ -32,7 +32,9 @@ This is used to calculate $\frac{K(k)}{K'(k)}$ where $K$ is the complete ellipti
 
 This is used to calculate $\frac{K(k)}{K'(k)}$ for small $k$ $(k<10^{-6})$. This is based on the approximation in ref. (2).
 
-$\frac{K(k)}{K'(k)}=\pi/\ln[2\frac{1+(1-k^2)^{1/4}}{1-(1-k^2)^{1/4}}]$
+$\frac{K(k)}{K'(k)}=\pi/\ln[2\frac{1+(1-k^2)^{1/4}}{1-(1-k^2)^{1/4}}]$ for $0<k<0.25$
+
+However, for very small $k$, the 4th root part can lead to computational issues, so this function uses an 8th order Taylor expansion of $(1-k^2)^{1/4}$ to ease this burden. This reduces the valid range to $0<k<10^{-6}$ which is perfect for covering the limitations of the previous function.
 
 ---
 
