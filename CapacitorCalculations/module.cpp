@@ -354,7 +354,7 @@ PyObject* dielectric_constant_relative_k(PyObject*, PyObject* args) {
 
 static PyMethodDef idcappy_methods[] = {
     { "k_thin", (PyCFunction)k_thin, METH_VARARGS, R"pbdoc(
-        k_thin(g: float, h: float = 500., u: float = 20.) -> float\n\n
+        k_thin(g: float, h: float, u: float) -> float\n\n
         Calculate the modulus for an elliptic integral for small to moderate material thickness.\n
         Can use any units as long as u, g, & h are the same units.\n
         :param g: gap spacing between fingers.\n
@@ -364,7 +364,7 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "k_thick", (PyCFunction)k_thick, METH_VARARGS, R"pbdoc(
-        k_thick(g: float, u: float = 20.) -> float\n\n
+        k_thick(g: float, u: float) -> float\n\n
         Calculate the modulus for an elliptic integral for large material thickness (like air).\n
         Can use any units as long as u & g are the same units.\n
         :param g: gap spacing between fingers.\n
@@ -387,7 +387,7 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "capacitance_bare", (PyCFunction)capacitance_bare, METH_VARARGS, R"pbdoc(
-        capacitance_bare(g: float, u: float = 20., h_sub: float = 500., N: int = 50, l: float = 1., eps_s: float = [for silia]) -> float\n\n
+        capacitance_bare(g: float, u: float, h_s: float, N: int, l: float, eps_s: float) -> float\n\n
         Calculate the bare capacitance of an interdigital capacitor in pF based on geometry.\n
         u, g, & h_s must have the same units, but l must be mm.\n
         :param g: gap spacing between fingers.\n
@@ -400,7 +400,7 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "capacitance_bare_k", (PyCFunction)capacitance_bare_k, METH_VARARGS, R"pbdoc(
-        capacitance_bare(k_a: float, k_s: float, N: int = 50, l: float = 1., eps_s: float = [for silica]) -> float\n\n
+        capacitance_bare(k_a: float, k_s: float, N: int, l: float, eps_s: float) -> float\n\n
         Calculate the bare capacitance of an interdigital capacitor in pF based on moduli.\n
         :param k_a: modulus for air contribution.\n
         :param k_s: modulus for substrate contribution.\n
@@ -411,7 +411,7 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "capacitance_geometric", (PyCFunction)capacitance_geometric, METH_VARARGS, R"pbdoc(
-        capacitance_bare(g: float, h_f: float, u: float = 20., N: int = 50, l: float = 1.) -> float\n\n
+        capacitance_geometric(g: float, h_f: float, u: float, N: int, l: float) -> float\n\n
         Calculate the geometric capacitance for a film in pF based on geometry.\n
         u, g, & h_f must have the same units, but l must be mm.\n
         :param g: gap spacing between fingers.\n
@@ -423,7 +423,7 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "capacitance_geometric_k", (PyCFunction)capacitance_geometric_k, METH_VARARGS, R"pbdoc(
-        capacitance_bare(k_f: float, N: int = 50, l: float = 1.) -> float\n\n
+        capacitance_geometric(k_f: float, N: int, l: float) -> float\n\n
         Calculate the geometric capacitance for a film in pF based on the modulus.\n
         :param k_f: modulus for film contribution.\n
         :param N: total number of fingers.\n
@@ -432,7 +432,7 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "capacitance_total", (PyCFunction)capacitance_total, METH_VARARGS, R"pbdoc(
-        capacitance_bare(g: float, h_f: float, eps_f: float, u: float = 20., h_s: float = 500., N: int = 50, l: float = 1., eps_s: float = [for silica]) -> float\n\n
+        capacitance_total(g: float, h_f: float, eps_f: float, u: float, h_s: float, N: int, l: float, eps_s: float) -> float\n\n
         Calculate the bare capacitance of an interdigital capacitor in pF based on geometry.\n
         u, g, h_s, & h_f must have the same units, but l must be mm.\n
         :param g: gap spacing between fingers.\n
@@ -447,7 +447,7 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "capacitance_total_k", (PyCFunction)capacitance_total_k, METH_VARARGS, R"pbdoc(
-        capacitance_bare(k_a: float, k_s: float, k_f: float, eps_f, N: int = 50, L: float = 1., eps_s: float = [for silica]) -> float\n\n
+        capacitance_total(k_a: float, k_s: float, k_f: float, eps_f, N: int, L: float, eps_s: float) -> float\n\n
         Calculate the bare capacitance of an interdigital capacitor in pF based on the moduli.\n
         :param k_a: modulus for air contribution.\n
         :param k_s: modulus for substrate contribution.\n
@@ -460,10 +460,11 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "dielectric_constant_relative", (PyCFunction)dielectric_constant_relative, METH_VARARGS, R"pbdoc(
-        dielectric_constant_relative(delC: float, g: float, h_f: float, u: float = 20., N: int = 50, l: float = 1.) -> float\n\n
+        dielectric_constant_relative(C_t: float, C_0: float, g: float, h_f: float, u: float, N: int, l: float) -> float\n\n
         Calculate the relative dielectric constant given the geometry\n
         u, g, & h_f must have the same units, but l must be mm.\n
-        :param delC: total C - bare C,\n
+        :param C_t: measured capacitance.\n
+        :param C_0: measured capacitance before film was grown.\n
         :param g: gap spacing between fingers.\n
         :param h_f: film thickness.\n
         :param u: unit cell of interdigital capacitor (finger width + gap spacing).\n
@@ -473,9 +474,10 @@ static PyMethodDef idcappy_methods[] = {
     )pbdoc" },
 
     { "dielectric_constant_relative_k", (PyCFunction)dielectric_constant_relative_k, METH_VARARGS, R"pbdoc(
-        dielectric_constant_relative(delC: float, k_f, N: int = 50, l: float = 1.) -> float\n\n
+        dielectric_constant_relative(C_t: float, C_0: float, k_f, N: int, l: float) -> float\n\n
         Calculate the relative dielectric constant given the modulus\n
-        :param delC: total C - bare C
+        :param C_t: measured capacitance.\n
+        :param C_0: measured capacitance before film was grown.\n
         :param k_f: modulus for film contribution.\n
         :param N: total number of fingers.\n
         :param l: finger length in mm.\n
