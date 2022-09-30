@@ -13,9 +13,17 @@ This package includes functions which make calculating the capacitance for inter
 
 $C = 2\varepsilon_0 (N-1) \ell \bigg(\frac{K(k_a)}{K'(k_a)}+ \frac{\varepsilon_{r,s}-1}{2}\frac{K(k_s)}{K'(k_s)}+ \frac{\varepsilon_{r,f}-1}{2}\frac{K(k_f)}{K'(k_f)}\bigg)$
 
-Where $N$ is the total number of fingers, $\ell$ is the length of a finger, the $a$ subscript is for air, the $s$ subscript is for the substrate, the $f$ subscript is for the thin film, and $K(k)$ is the complete elliptic integral of the first kind.
+Where $N$ is the total number of fingers, $\ell$ is the length of a finger, the $a$ subscript is for air, the $s$ subscript is for the substrate, the $f$ subscript is for the thin film, and $K(k)$ is the complete elliptic integral of the first kind
 
 $K(k) = \int\limits_0^{\pi/2}\frac{d\phi}{\sqrt{1-k^2\sin^2\phi}} = \frac{\pi}{2}\sum\limits_{n=0}^{\infty}\bigg[\frac{(2n-1)!!}{(2n)!!}\bigg]^2 k^{2n}$
+
+and $K'(k)=K(k')$ where $k'^2+k^2=1$.
+
+The moduli, $k_i$ are found by
+
+$k_i &= \frac{\sinh(\frac{\pi(u-d)}{4h_i})}{\sinh(\frac{\pi(u+d)}{4h_i})}\sqrt{\frac{\sinh^2(\frac{\pi(3u-d)}{4h_i})- \sinh^2(\frac{\pi(u+d)}{4h_i})}{\sinh^2(\frac{\pi(3u-d)}{4h_i})- \sinh^2(\frac{\pi(u-d)}{4h_i})}}$
+
+$k(h\gg u) &= \frac{u-d}{u+d}\sqrt{\frac{2(u-d)}{2u-d}}$
 
 #### References
 
