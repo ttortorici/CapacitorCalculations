@@ -82,7 +82,7 @@ This calculates the capacitance of an interdigital capacitor on a substrate of a
 
 `l`: length of a finger in mm.
 
-`eps_s`: relative dielectric constant $\vareps_r$ of the substrate.
+`eps_s`: relative dielectric constant $\varepsilon_r$ of the substrate.
 
 return: capacitance in pF
 
@@ -100,7 +100,7 @@ This calculates the capacitance of an interdigital capacitor on a substrate of a
 
 `l`: length of a finger in mm.
 
-`eps_s`: relative dielectric constant $\vareps_r$ of the substrate.
+`eps_s`: relative dielectric constant $\varepsilon_r$ of the substrate.
 
 return: capacitance in pF
 
@@ -202,7 +202,7 @@ Calculate the dielectric constant of a thin film grown on an interdigital capaci
 
 `l`: length of a finger in mm.
 
-return: $\vareps_{\text{film}}$
+return: $\varepsilon_{\text{film}}$
 
 ---
 
