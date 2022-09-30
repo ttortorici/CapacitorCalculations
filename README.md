@@ -220,4 +220,4 @@ Calculate the dielectric constant of a thin film grown on an interdigital capaci
 
 `l`: length of a finger in mm.
 
-return: $\vareps_{\text{film}}$
+return: $\varepsilon_{\text{film}}$
