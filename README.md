@@ -11,7 +11,11 @@ If there is a permission error add the `--user` tag to the end of the command.
 # Documentation
 This package includes functions which make calculating the capacitance for interdigital capacitors possible. From ref. (1) we can calculate the total capacitance of an interdigital capacitor on a substrate lying on a ground plane with a thin film of material grown on it with the following:
 
-$C = 2\varepsilon_0 (N-1) \ell \bigg(\frac{K(k_a)}{K'(k_a)}+ \frac{\varepsilon_{r,s}-1}{2}\frac{K(k_s)}{K'(k_s}+ \frac{\varepsilon_{r,f}-1}{2}\frac{K(k_f)}{K'(k_f)}\bigg)$
+$C = 2\varepsilon_0 (N-1) \ell \bigg(\frac{K(k_a)}{K'(k_a)}+ \frac{\varepsilon_{r,s}-1}{2}\frac{K(k_s)}{K'(k_s)}+ \frac{\varepsilon_{r,f}-1}{2}\frac{K(k_f)}{K'(k_f)}\bigg)$
+
+Where $N$ is the total number of fingers, $\ell$ is the length of a finger, the $a$ subscript is for air, the $s$ subscript is for the substrate, the $f$ subscript is for the thin film, and $K(k)$ is the complete elliptic integral of the first kind.
+
+$K(k) = \int\limits_0^{\pi/2}\frac{d\phi}{\sqrt{1-k^2\sin^2\phi}} = \frac{\pi}{2}\sum\limits_{n=0}^{\infty}\bigg[\frac{(2n-1)!!}{(2n)!!}\bigg]^2 k^{2n}$
 
 #### References
 
