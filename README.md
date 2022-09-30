@@ -24,9 +24,11 @@ and $K'(k)=K(k')$ where $k'^2+k^2=1$.
 
 The moduli, $k_i$ are found by
 
-$k_i = \frac{\sinh(\frac{\pi(u-d)}{4h_i})}{\sinh(\frac{\pi(u+d)}{4h_i})}\sqrt{\frac{\sinh^2(\frac{\pi(3u-d)}{4h_i})- \sinh^2(\frac{\pi(u+d)}{4h_i})}{\sinh^2(\frac{\pi(3u-d)}{4h_i})- \sinh^2(\frac{\pi(u-d)}{4h_i})}}$
+$k_i = \frac{\sinh(\frac{\pi(u-g)}{4h_i})}{\sinh(\frac{\pi(u+g)}{4h_i})}\sqrt{\frac{\sinh^2(\frac{\pi(3u-g)}{4h_i})- \sinh^2(\frac{\pi(u+g)}{4h_i})}{\sinh^2(\frac{\pi(3u-g)}{4h_i})- \sinh^2(\frac{\pi(u-g)}{4h_i})}}$
 
-$k(h\gg u) = \frac{u-d}{u+d}\sqrt{\frac{2(u-d)}{2u-d}}$
+$k(h\gg u) = \frac{u-g}{u+g}\sqrt{\frac{2(u-g)}{2u-g}}$
+
+Where $u$ is the unit cells size (gap distance + finger width), $g$ is the gap distance, and $h_i$ is the thickness of material $i$.
 
 #### References
 
