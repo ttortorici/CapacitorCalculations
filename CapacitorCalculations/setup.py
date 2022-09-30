@@ -1,6 +1,6 @@
 from setuptools import setup, Extension
 
-sfc_module = Extension('dielepy',
+sfc_module = Extension('idcappy',
                        sources=['module.cpp'],
                        include_dirs=['include', '..\\CapacitorCalculations'],
                        library_dirs=["\\root\\project"],
@@ -10,12 +10,6 @@ sfc_module = Extension('dielepy',
                        )
 
 setup(
-    name='dielepy',
-    version='0.0',
     scripts=[],
-    # packages=['src'],
-    description='Allows for fast calculations related to dielectric spectroscopy analysis.',
-    author='Teddy Tortorici',
-    author_email='etc.tortorici@gmail.com',
     ext_modules=[sfc_module]
 )

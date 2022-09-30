@@ -1,0 +1,8 @@
+LICENSE
+module.cpp
+pyproject.toml
+setup.py
+idcappy.egg-info/PKG-INFO
+idcappy.egg-info/SOURCES.txt
+idcappy.egg-info/dependency_links.txt
+idcappy.egg-info/top_level.txt

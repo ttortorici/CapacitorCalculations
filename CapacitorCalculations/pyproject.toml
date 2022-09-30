@@ -1,3 +1,19 @@
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "idcappy"
+version = "1.0"
+description = "Provides functions for effecient calculations for interdigitial capacitors."
+authors = [{ name = "Teddy Tortorici", email = "etc.tortorici@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+	"License :: GNU GPL",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+]
+keywords = ["dielectric", "capacitor", "interdigital"]
+
+[project.urls]
+Homepage = "https://github.com/teddy-tort/capacitorcalculations"
