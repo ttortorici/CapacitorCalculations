@@ -3,8 +3,9 @@
 
 # Install
 In a terminal type:
+cd into \CapacitorCalculations\CapacitorCalculations and type
 
-`pip install [path to git repos]\CapacitorCalculations\CapacitorCalculations`
+`python setup.py install`
 
 If there is a permission error add the `--user` tag to the end of the command.
 
