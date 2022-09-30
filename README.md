@@ -2,15 +2,16 @@
  Extension module for python to calculate interdigital capacitor related things
 
 # Install
-In a terminal type:
-cd into \CapacitorCalculations\CapacitorCalculations and type
+In a terminal cd into \CapacitorCalculations\CapacitorCalculations and type
 
 `python setup.py install`
 
 If there is a permission error add the `--user` tag to the end of the command.
 
 # Documentation
-This package includes functions which make calculating the capacitance for interdigital capacitors possible.
+This package includes functions which make calculating the capacitance for interdigital capacitors possible. From ref. (1) we can calculate the total capacitance of an interdigital capacitor on a substrate lying on a ground plane with a thin film of material grown on it with the following:
+
+$C = 2\varepsilon_0 (N-1) \ell \bigg(\frac{K(k_a)}{K'(k_a)}+ \frac{\varepsilon_{r,s}-1}{2}\frac{K(k_s)}{K'(k_s}+ \frac{\varepsilon_{r,f}-1}{2}\frac{K(k_f)}{K'(k_f)}\bigg)$
 
 #### References
 
