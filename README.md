@@ -7,9 +7,11 @@ Extension module for python to calculate interdigital capacitor related things.
 `pip install idcappy`
 
 # Install from source
-In a terminal cd into \CapacitorCalculations\CapacitorCalculations and type
+Clone the repository and then in a terminal cd into \CapacitorCalculations\CapacitorCalculations and type
 
 `python setup.py install`
+
+Note: depending on your Python setup, you may need to replace `python` with `py` or `python3`
 
 # Documentation
 This package includes functions which make calculating the capacitance for interdigital capacitors possible. From ref. (1) we can calculate the total capacitance of an interdigital capacitor on a substrate lying on a ground plane with a thin film of material grown on it with the following:
