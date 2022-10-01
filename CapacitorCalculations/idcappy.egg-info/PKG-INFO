@@ -680,7 +680,6 @@ License: GNU GENERAL PUBLIC LICENSE
         
 Project-URL: Homepage, https://github.com/teddy-tort/capacitorcalculations
 Keywords: dielectric,capacitor,interdigital
-Classifier: License :: GNU GPL
 Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 3
 License-File: LICENSE

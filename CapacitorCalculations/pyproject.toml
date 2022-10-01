@@ -5,11 +5,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "idcappy"
 version = "1.0"
-description = "Provides functions for effecient calculations for interdigitial capacitors."
+description = "Provides functions for effecient calculations for interdigitial capacitors. Documentation can be found on the github https://github.com/teddy-tort/CapacitorCalculations/blob/cf940bc84ab8a6deb9a0718a328eb9fe2d3f6642/README.md"
 authors = [{ name = "Teddy Tortorici", email = "etc.tortorici@gmail.com" }]
 license = { file = "LICENSE" }
 classifiers = [
-	"License :: GNU GPL",
 	"Programming Language :: Python",
 	"Programming Language :: Python :: 3",
 ]

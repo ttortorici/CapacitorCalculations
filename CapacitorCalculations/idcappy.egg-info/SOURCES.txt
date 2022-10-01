@@ -1,4 +1,5 @@
 LICENSE
+README.md
 module.cpp
 pyproject.toml
 setup.py
