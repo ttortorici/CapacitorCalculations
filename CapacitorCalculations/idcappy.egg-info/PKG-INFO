@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: idcappy
-Version: 1.2
+Version: 1.3
 Summary: Provides functions for effecient calculations for interdigitial capacitors. Documentation can be found on the github https://github.com/teddy-tort/CapacitorCalculations/blob/cf940bc84ab8a6deb9a0718a328eb9fe2d3f6642/README.md
 Author-email: Teddy Tortorici <etc.tortorici@gmail.com>
 License: GNU GENERAL PUBLIC LICENSE
