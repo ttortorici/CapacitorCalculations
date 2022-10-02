@@ -71,6 +71,16 @@ return: $\frac{K(k)}{K'(k)}$
 
 ---
 
+`ellint_inv_ratio(k: float) -> float`
+
+This is used to calculate $\frac{K'(k)}{K(k)}$ where $K$ is the complete elliptic integral of the first kind and $K'$ is its complement such that $K'(k)=K(k')$ and $k'=\sqrt{1-k^2}$. This uses the `comp_ellint1` from the cmath standard library.
+
+`k`: modulus $k$ for complete elliptic integral of the first kind.
+
+return: $\frac{K(k)}{K'(k)}$
+
+---
+
 `ellint_ratio_approx(k: float) -> float`
 
 This is used to calculate $\frac{K(k)}{K'(k)}$ for small $k$ $(k < 0.05)$. This is based on the approximation in ref. (2).
@@ -81,7 +91,7 @@ However, for very small $k$, the 4th root part can lead to computational issues,
 
 `k`: modulus $k$ for complete elliptic integral of the first kind.
 
-return: small $k$ approximation for $\frac{K(k)}{K'(k)}
+return: small $k$ approximation for $\frac{K(k)}{K'(k)}$
 
 ---
 
@@ -149,7 +159,7 @@ return: capacitance in pF
 
 ---
 
-capacitance_geometric(g: float, h_f: float, u: float, N: int, l: float) -> float
+`capacitance_geometric(g: float, h_f: float, u: float, N: int, l: float) -> float`
 
 Calculates a capacitance that is related to the geometry of the film. This aids in analyzing the films dielectric constant. `g`, `h_f`, and `u` must have the same units.
 
@@ -227,7 +237,7 @@ return: capacitance in pF.
 
 ---
 
-dielectric_constant_relative(C_t: float, C_0: float, g: float, h_f: float, u: float, N: int, l: float) -> float
+`dielectric_constant_relative(C_t: float, C_0: float, g: float, h_f: float, u: float, N: int, l: float) -> float`
 
 Calculate the dielectric constant of a thin film grown on an interdigital capacitor.
 
@@ -249,7 +259,7 @@ return: $\varepsilon_{\text{film}}$
 
 ---
 
-dielectric_constant_relative_k(C_t: float, C_0: float, k_f: float, N: int, l: float) -> float
+`dielectric_constant_relative_k(C_t: float, C_0: float, k_f: float, N: int, l: float) -> float`
 
 Calculate the dielectric constant of a thin film grown on an interdigital capacitor.
 
