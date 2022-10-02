@@ -71,6 +71,16 @@ return: $\frac{K(k)}{K'(k)}$
 
 ---
 
+`ellint_inv_ratio(k: float) -> float`
+
+This is used to calculate $\frac{K'(k)}{K(k)}$ where $K$ is the complete elliptic integral of the first kind and $K'$ is its complement such that $K'(k)=K(k')$ and $k'=\sqrt{1-k^2}$. This uses the `comp_ellint1` from the cmath standard library.
+
+`k`: modulus $k$ for complete elliptic integral of the first kind.
+
+return: $\frac{K(k)}{K'(k)}$
+
+---
+
 `ellint_ratio_approx(k: float) -> float`
 
 This is used to calculate $\frac{K(k)}{K'(k)}$ for small $k$ $(k < 0.05)$. This is based on the approximation in ref. (2).
