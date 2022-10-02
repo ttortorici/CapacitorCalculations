@@ -1,12 +1,17 @@
-# CapacitorCalculationsExtensionModule
- Extension module for python to calculate interdigital capacitor related things
+# idcappy
 
-# Install
-In a terminal cd into \CapacitorCalculations\CapacitorCalculations and type
+Extension module for python to calculate interdigital capacitor related things.
+
+# Install with pip
+
+`pip install idcappy`
+
+# Install from source
+Clone the repository and then in a terminal cd into \CapacitorCalculations\CapacitorCalculations and type
 
 `python setup.py install`
 
-If there is a permission error add the `--user` tag to the end of the command.
+Note: depending on your Python setup, you may need to replace `python` with `py` or `python3`
 
 # Documentation
 This package includes functions which make calculating the capacitance for interdigital capacitors possible. From ref. (1) we can calculate the total capacitance of an interdigital capacitor on a substrate lying on a ground plane with a thin film of material grown on it with the following:
@@ -21,15 +26,39 @@ and $K'(k)=K(k')$ where $k'^2+k^2=1$.
 
 The moduli, $k_i$ are found by
 
-$k_i = \frac{\sinh(\frac{\pi(u-d)}{4h_i})}{\sinh(\frac{\pi(u+d)}{4h_i})}\sqrt{\frac{\sinh^2(\frac{\pi(3u-d)}{4h_i})- \sinh^2(\frac{\pi(u+d)}{4h_i})}{\sinh^2(\frac{\pi(3u-d)}{4h_i})- \sinh^2(\frac{\pi(u-d)}{4h_i})}}$
+$k_i = \frac{\sinh(\frac{\pi(u-g)}{4h_i})}{\sinh(\frac{\pi(u+g)}{4h_i})}\sqrt{\frac{\sinh^2(\frac{\pi(3u-g)}{4h_i})- \sinh^2(\frac{\pi(u+g)}{4h_i})}{\sinh^2(\frac{\pi(3u-g)}{4h_i})- \sinh^2(\frac{\pi(u-g)}{4h_i})}}$
 
-$k(h\gg u) = \frac{u-d}{u+d}\sqrt{\frac{2(u-d)}{2u-d}}$
+$k(h\gg u) = \frac{u-g}{u+g}\sqrt{\frac{2(u-g)}{2u-g}}$
+
+Where $u$ is the unit cells size (gap distance + finger width), $g$ is the gap distance, and $h_i$ is the thickness of material $i$.
 
 #### References
 
 (1) Huey-Daw Wu, Zhihang Zhang, F. Barnes, C. M. Jackson, A. Kain and J. D. Cuchiaro, "Voltage tunable capacitors using high temperature superconductors and ferroelectrics," in IEEE Transactions on Applied Superconductivity, vol. 4, no. 3, pp. 156-160, Sept. 1994, doi: 10.1109/77.317831.
 
 (2) S. S. Bedair and I. Wolff, "Fast, accurate and simple approximate analytic formulas for calculating the parameters of supported coplanar waveguides for (M)MIC's," in IEEE Transactions on Microwave Theory and Techniques, vol. 40, no. 1, pp. 41-48, Jan. 1992, doi: 10.1109/22.108321.
+
+### Example
+
+```
+import idcappy as icp
+
+substrate_thickness = 500.0  # um
+unit_cell = 20.0  # um
+N = 50
+finger_length = 1.0  # mm
+epsr_silica = 3.9
+film_thickness = 0.08  # um
+epsr_film = 8.2
+
+gap = 10.0  # um
+
+k_air = icp.k_thick(gap, unit_cell)
+k_sub = icp.k_thin(gap, substrate_thickness, unit_cell)
+k_flm = icp.k_thin(gap, film_thickness, unit_cell)
+cap_bare = icp.capacitance_bare_k(k_air, k_sub, N, finger_length, epsr_silica)
+cap_total = icp.capacitance_total_k(k_air, k_sub, k_flm, epsr_film, N, finger_length, epsr_silica)
+```
 
 ### Functions
 `ellint_ratio(k: float) -> float`
@@ -176,7 +205,7 @@ return: capacitance in pF.
 
 ---
 
-`capacitance_total_k(g: float, h_f: float, eps_f: float, u: float, h_s: float, N: int, l: float, eps_s: float) -> float`
+`capacitance_total_k(k_a: float, k_s: float, k_f: float, eps_f: float, h_s: float, N: int, l: float, eps_s: float) -> float`
 
 Calculates the capacitance of an interdigtal capacitor on a substrate with a well characterized film grown on it. This is the same as `capacitance_total()`, except it uses the modulii instead of the geometric factors.
 
