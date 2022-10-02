@@ -1,14 +1,14 @@
 ﻿  module.cpp
-D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(107,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(136,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(168,36): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(169,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(201,37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(229,29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(111,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(138,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(168,41): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(169,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(202,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\GitHub\CapacitorCalculations\CapacitorCalculations\module.cpp(230,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
      Creating library D:\GitHub\CapacitorCalculations\x64\Release\CapacitorCalculations.lib and object D:\GitHub\CapacitorCalculations\x64\Release\CapacitorCalculations.exp
   Generating code
-  21 of 26 functions (80.8%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+  20 of 29 functions (69.0%) were compiled, the rest were copied from previous compilation.
+    11 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   CapacitorCalculations.vcxproj -> D:\GitHub\CapacitorCalculations\x64\Release\CapacitorCalculations.pyd

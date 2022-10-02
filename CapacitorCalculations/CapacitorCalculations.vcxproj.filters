@@ -23,9 +23,4 @@
     <None Include="setup.py" />
     <None Include="pyproject.toml" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="functions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
 </Project>
