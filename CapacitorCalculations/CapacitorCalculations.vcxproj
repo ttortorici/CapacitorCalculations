@@ -24,6 +24,7 @@
     <ProjectGuid>{78043332-e3b3-43d7-a195-1c255ef9d10f}</ProjectGuid>
     <RootNamespace>CapacitorCalculations</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MonteCarloC</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

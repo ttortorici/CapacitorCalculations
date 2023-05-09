@@ -3,9 +3,9 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "idcappy"
+name = "dipolepy"
 version = "1.4"
-description = "Provides functions for effecient calculations for interdigitial capacitors. Documentation can be found on the github https://github.com/teddy-tort/CapacitorCalculations/"
+description = "Provides functions for effecient calculations for monte carlo simulations of dipole-dipole interaction systems. Documentation can be found on the github https://github.com/teddy-tort/CapacitorCalculations/"
 authors = [{ name = "Teddy Tortorici", email = "etc.tortorici@gmail.com" }]
 license = { file = "LICENSE" }
 readme = "README.md"
